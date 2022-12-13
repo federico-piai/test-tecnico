@@ -65,12 +65,17 @@ Nel momento in cui viene inserito un elemento, o viene "svuotato" questo buffer,
 * Le performance sono state testate parzialmente usando curl, copiando il codice dalla pagina http://localhost:8080/docs e aggiungendo un foreach per eseguirlo più volte, come qui di seguito. Non è stato eseguito un test completo con 10 thread in parallelo ognuno da 10k comandi, ma solo uno da 10k. Anche in questo caso il tempo impiegato è circa 90 secondi contro i 45 richiesti.
 
 `
-for i in {1..10000}; do curl -s -X 'POST'   'http://localhost:8000/api/v1/ingest'   -H 'accept: application/json'   -H 'access_token: BigProfiles-API'   -H 'Content-Type: application/json'   -d '{
-  "key": 1,
-  "payload": "Stringa di esempio"
-}' > /dev/null
-done
+
+
+    for i in {1..10000}; do 
+	    curl -s -X 'POST'   'http://localhost:8000/api/v1/ingest'   -H 'accept: application/json'   -H 'access_token: BigProfiles-API'   -H 'Content-Type: application/json'   -d '{
+            "key": 1,
+            "payload": "Stringa di esempio"
+        }' > /dev/null
+    done
+	
 `
+
 
 ## Assunzioni fatte
 
