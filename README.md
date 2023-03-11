@@ -2,6 +2,8 @@
 
 Nel repository è presente il codice per un API ad alte performance per l’ingestion di informazioni.
 
+La cartella studio, esterna al progetto, contiene informazioni su alcune tecnologie utilizzate, come PyArrow.
+
 Sui dati salvati è possibile ottenere statistiche aggregate e la lista delle ultime 10 chiamate effettuate dell’ultima aggregazione.
 
 ## Prerequisiti
